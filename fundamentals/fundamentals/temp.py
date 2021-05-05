@@ -17,7 +17,7 @@ dojo = {
     'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
 # print(len(dojo['instructors']))
-print(print_info(dojo, 'locations', 'instructors'))
+print_info(dojo, 'locations', 'instructors')
 
 """
 # output:

@@ -34,7 +34,7 @@ def iterate_dictionary(students):
     for i in range(len(students)):
         line = students[i]
         print(line) 
-print(iterate_dictionary(students))
+iterate_dictionary(students)
 """
 should output: (it's okay if each key-value pair ends up on 2 separate lines;
 bonus to get them to appear exactly as below!)
@@ -55,7 +55,7 @@ students = [
         {'first_name' : 'Mark', 'last_name' : 'Guillen'},
         {'first_name' : 'KB', 'last_name' : 'Tonel'}
     ]
-print(iterate_dictionary2('first_name', students))
+iterate_dictionary2('first_name', students)
 """
 Output should be:
 Michael
@@ -74,7 +74,7 @@ students = [
         {'first_name' : 'Mark', 'last_name' : 'Guillen'},
         {'first_name' : 'KB', 'last_name' : 'Tonel'}
     ]
-print(iterate_dictionary2('last_name', students))
+iterate_dictionary2('last_name', students)
 """
 Jordan
 Rosales
@@ -99,7 +99,7 @@ dojo = {
     'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
 # print(len(dojo['instructors']))
-print(print_info(dojo, 'locations', 'instructors'))
+print_info(dojo, 'locations', 'instructors')
 
 """
 # output:
