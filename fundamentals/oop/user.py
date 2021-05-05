@@ -14,34 +14,23 @@ class User():
         self.account_balance = 0
     def make_deposit(self, amount):
         self.account_balance += amount
+        return self
     def make_withdrawal(self, amount):
         self.account_balance -= amount
+        return self
     def display_user_balance(self):
         print("User: " + self.name + ", Balance: " + str(self.account_balance))
+        return self
     def transfer_money(self, account_receiving, amount_to_transfer):
         self.make_withdrawal(amount_to_transfer)
         account_receiving.account_balance += amount_to_transfer
+        return self
 
         
 tori = User("Victoria")
 tom = User("Thomas")
 sally = User("Sally")
 
-tori.make_deposit(10000)
-tori.make_deposit(10000)
-tori.make_deposit(10000)
-tori.make_withdrawal(1000)
-tori.display_user_balance()
-tom.make_deposit(500)
-tom.make_deposit(1500)
-tom.make_withdrawal(500)
-tom.display_user_balance()
-sally.make_deposit(1000)
-sally.make_withdrawal(50)
-sally.display_user_balance()
-tori.transfer_money(tom, 1000)
-tom.display_user_balance()
-tori.display_user_balance()
-tom.transfer_money(sally, 1000)
-sally.display_user_balance()
-tom.display_user_balance()
+tori.make_deposit(10000).make_deposit(10000).make_deposit(10000).make_withdrawal(1000).display_user_balance().transfer_money(tom, 1000).display_user_balance()
+tom.make_deposit(500).make_deposit(1500).make_withdrawal(500).display_user_balance().transfer_money(sally, 1000).display_user_balance()
+sally.make_deposit(1000).make_withdrawal(50).display_user_balance()
