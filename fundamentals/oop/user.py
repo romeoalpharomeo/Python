@@ -26,7 +26,6 @@ class User():
         account_receiving.account_balance += amount_to_transfer
         return self
 
-        
 tori = User("Victoria")
 tom = User("Thomas")
 sally = User("Sally")
