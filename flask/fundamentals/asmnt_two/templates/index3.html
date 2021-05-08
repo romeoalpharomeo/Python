@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .boxes {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 0px 150px;
+            
+        }
+        .blueBox {
+            /* background-color: {{ boxcolor }};  This works as well for changing the box colors but red squigleys as well*/
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+
+    <div class="boxes">
+        <!-- This method works to change the color of the boxes, however, I still have red squigly lines here indicating something is wrong. -->
+        {% for i in range(0,numberofboxes): %}
+            <div style="background-color: {{ boxcolor }};" class="blueBox"></div> 
+        {% endfor %}
+    </div>
+</body>
+</html>
