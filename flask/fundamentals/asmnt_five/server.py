@@ -12,7 +12,7 @@ from flask import Flask, render_template, request, redirect # added request
 def create_user():
     print("Got Post Info")
     print(request.form)
-    full_name_from_form = request.form['firstname']
+    full_name_from_form = request.form['fullname']
     location_from_form = request.form['location']
     language_from_form = request.form['language']
     optional_comments_from_form = request.form['usercomments']
