@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 100px;
+}
+
+
+.cntr {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid grey;
+    height: 500px;
+    width: 850px;
+    padding: 40px;
+}
+
+
+
+form {
+    text-align: center;
+    width: 750px;
+    margin: 20px;
+    
+}
+
+.input-group, .form-select, .form-floating {
+    margin-top: 10px;
+}
