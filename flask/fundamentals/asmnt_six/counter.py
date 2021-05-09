@@ -12,7 +12,6 @@ def index():
         print("key 'yourkeys' does NOT exist")
         session['yourkeys'] = 1
     return render_template('index.html')
-
 @app.route('/destroy_session')
 def destroy():
     session.clear()
