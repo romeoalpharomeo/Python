@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    margin: 0px 100px;
+}
+
+
+.toohigh {
+    background-color: red;
+}
+
+.toolow {
+    background-color: silver;
+}
+
+.correct {
+    background-color: green;
+}
