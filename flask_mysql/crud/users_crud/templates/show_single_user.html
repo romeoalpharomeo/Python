@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1><a href="/">Home</a></h1>
+        {% for person in user %}
+        <h1>User: {{person['id']}}</h1>
+        <p>Full Name: {{person['first_name']}} {{person['last_name']}}</p>
+        <p>Email: {{person['email']}}</p>
+        <p>Created On: {{person['created_at']}}</p>
+        <p>Last Updated On: {{person['updated_at']}}</p>
+        {% endfor %}
+        <p><a href="/edit_user/{{userid}}">Edit</a> | 
+        <a href="/delete_this_user/{{userid}}">Delete</a>
+        </p>
+</body>
+</html>
