@@ -8,18 +8,16 @@
 </head>
 <body>
     <h1><a href="/">Home</a></h1>
-    <h1>Edit User {{id_num}}</h1>
-    {% for user in user_info %}
+    <h1>Edit User {{user['id']}}</h1>
     <p></p>
-    <form action="/edit_user_submit/{{id_num}}" method="POST">
+    <form action="/edit_user_submit/{{user['id']}}" method="POST">
         <p>First Name:</p>
-        <input type="text" name="fname" value="{{user['first_name']}}">
+        <input type="text" name="firstname" value="{{user['first_name']}}">
         <p>Last Name:</p>
-        <input type="text" name="lname" value="{{user['last_name']}}">
+        <input type="text" name="lastname" value="{{user['last_name']}}">
         <p>Email:</p>
-        <input type="text" name="eml" value="{{user['email']}}">
+        <input type="text" name="email" value="{{user['email']}}">
         <input type="submit" value="Update">
     </form>
-    {% endfor %}
 </body>
 </html>
