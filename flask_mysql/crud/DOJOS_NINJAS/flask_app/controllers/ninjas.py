@@ -11,4 +11,4 @@ def ninjas_index():
 @app.route("/create_ninja", methods=["POST"])
 def add_ninja_to_db():
     new_ninja_id = Ninja.insert_new_ninja(request.form)
-    return redirect("/dojos")
+    return redirect(f"/display_ninjas/{request.form['dojo_id']}")
