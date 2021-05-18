@@ -14,6 +14,8 @@ def add_user_page():
 
 @app.route("/create_user", methods=["POST"])
 def add_user_to_db():
+    if not User.validate_user(request.form):
+        return redirect('/add_user')
     new_user_id = User.insert_new_user(request.form)
     return redirect(f"/show_single_user/{new_user_id}")
 
